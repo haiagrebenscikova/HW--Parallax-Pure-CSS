@@ -1,0 +1,274 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1238;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu .toggler {
+  display: none;
+}
+
+.menu .navbar {
+  height: 10vh;
+  background-image: url("images/bg.png");
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .navbar a {
+  color: rgba(255, 255, 0, 0.733);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  -webkit-perspective: 1px;
+          perspective: 1px;
+}
+
+.container section {
+  height: 200vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.container section:nth-of-type(1) {
+  background-image: url("images/img2.jpg");
+  background-size: cover;
+  -webkit-transform: translateZ(-3px) scale(4);
+          transform: translateZ(-3px) scale(4);
+}
+
+.container section:nth-of-type(2) {
+  -webkit-transform: translateZ(-2px) scale(4);
+          transform: translateZ(-2px) scale(4);
+  background-image: url("images/diver3.png");
+  background-repeat: no-repeat;
+  background-size: 80vh;
+  background-position: 78% 28%;
+}
+
+.container section:nth-of-type(3) {
+  -webkit-transform: translateZ(-2px) scale(2);
+          transform: translateZ(-2px) scale(2);
+  background-image: url("images/diver2.png");
+  background-repeat: no-repeat;
+  background-size: 40vh;
+  background-position: 100% 48%;
+}
+
+.container section:nth-of-type(4) {
+  color: white;
+  -webkit-transform: translateZ(-1px) scale(2);
+          transform: translateZ(-1px) scale(2);
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  right: 30%;
+  top: 50%;
+  height: 40%;
+  width: 40%;
+  line-height: 2rem;
+  padding: 4rem 0 0 0;
+}
+
+.container section:nth-of-type(4) h1 {
+  font-weight: 800;
+  font-size: 30px;
+  padding-bottom: 2rem;
+}
+
+.container section:nth-of-type(5) {
+  position: relative;
+  top: 110vh;
+  width: 80%;
+  height: 100%;
+  padding: 5%;
+  margin-left: 10%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #adcb;
+  -webkit-transform: translateZ(0px);
+          transform: translateZ(0px);
+}
+
+.container section:nth-of-type(5) h2 {
+  color: #111;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container section:nth-of-type(5) li h3 {
+  color: #111;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
+.container section:nth-of-type(5) li input {
+  padding: 0.5rem;
+}
+
+.container section:nth-of-type(5) li .checkbox {
+  padding-top: 30%;
+  font-size: 20px;
+}
+
+.container section:nth-of-type(5) li .checkbox a {
+  font-size: 20px;
+}
+
+.container section:nth-of-type(5) button {
+  background-color: yellow;
+  border-radius: 10px;
+  color: blue;
+  padding: 0.5rem 2rem;
+  font-size: 20px;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  outline: none;
+}
+
+.dflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1100px) {
+  .container section:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .menu .navbar a {
+    display: none;
+  }
+  .menu .navbar .brand {
+    display: block;
+    position: relative;
+    right: 30%;
+  }
+  .menu .toggler {
+    display: block;
+    position: relative;
+    top: -50px;
+    left: 85%;
+    height: 0;
+  }
+  .menu .toggler .icon {
+    color: white;
+    width: 10%;
+  }
+  .container {
+    height: 100vh;
+  }
+  .container section:nth-of-type(1) {
+    height: 200vh;
+  }
+  .container section:nth-of-type(2) {
+    background-size: 40vh;
+    background-position: 50% 25%;
+  }
+  .container section:nth-of-type(4) {
+    position: relative;
+    left: 25%;
+    top: 20%;
+    height: 40%;
+    width: 60%;
+    line-height: 1.5rem;
+    padding: 2rem 0 0 0;
+    font-weight: 600;
+  }
+  .container section:nth-of-type(5) {
+    height: 100vh;
+  }
+  .container section:nth-of-type(5) h2 {
+    font-size: 20px;
+  }
+  .container section:nth-of-type(5) li h3 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .container section:nth-of-type(5) li input {
+    padding: 5px;
+  }
+  .container section:nth-of-type(5) li .checkbox {
+    padding-top: 30%;
+    font-size: 16px;
+  }
+  .container section:nth-of-type(5) li .checkbox a {
+    font-size: 16px;
+  }
+  .container section:nth-of-type(5) button {
+    background-color: yellow;
+    border-radius: 10px;
+    color: blue;
+    padding: 0.5rem 2rem;
+    font-size: 16px;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    outline: none;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .menu .navbar {
+    height: 20%;
+  }
+  .container section:nth-of-type(4) {
+    position: relative;
+    right: 20%;
+    top: 30%;
+    height: 40%;
+    width: 60%;
+    line-height: 1.5rem;
+    padding: 2rem 0 0 0;
+    font-weight: 400;
+  }
+  .container section:nth-of-type(4) h1 {
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 1rem;
+  }
+  .container section:nth-of-type(5) {
+    position: relative;
+    top: 110vh;
+    width: 90%;
+    height: 170%;
+    padding: 5%;
+    margin-left: 5%;
+  }
+  .container section:nth-of-type(5) h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .container section:nth-of-type(5) li h3 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .container section:nth-of-type(5) li .checkbox {
+    font-size: 16px;
+  }
+  .container section:nth-of-type(5) li .checkbox a {
+    font-size: 16px;
+  }
+  .container section:nth-of-type(5) button {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=parallax.css.map */

@@ -1,0 +1,273 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1238;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+.menu {
+
+.toggler {
+        display: none;
+    }
+.navbar {
+    height: 10vh;
+    background-image: url('images/bg.png');
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+        color: rgba(255, 255, 0, 0.733);
+    }   
+}
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    perspective: 1px;
+    section {
+        height: 200vh;
+        width: 100vw;
+        position: absolute;
+        &:nth-of-type(1) {
+            background-image: url('images/img2.jpg');
+            background-size: cover;
+            transform: translateZ(-3px) scale(4);
+        }
+        &:nth-of-type(2) {
+            transform: translateZ(-2px) scale(4);
+            background-image: url('images/diver3.png');
+            background-repeat: no-repeat;
+            background-size: 80vh;
+            background-position: 78% 28%;
+        }
+        &:nth-of-type(3){
+            transform: translateZ(-2px) scale(2);
+            background-image: url('images/diver2.png');
+            background-repeat: no-repeat;
+            background-size: 40vh;
+            background-position: 100% 48%;    
+        }
+        &:nth-of-type(4) {
+            color: white;
+            transform: translateZ(-1px) scale(2);
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+            right: 30%;
+            top: 50%;
+            height: 40%;
+            width: 40%;
+            line-height: 2rem;
+            padding: 4rem 0 0 0;
+            h1 {
+                font-weight: 800;
+                font-size: 30px;
+                padding-bottom: 2rem;
+            }
+        }
+        &:nth-of-type(5){
+            position: relative;
+            top: 110vh;
+            width: 80%;
+            height: 100%;
+            padding: 5%;
+            margin-left: 10%;
+            box-sizing: border-box;
+            background-color: #adcb;
+            transform: translateZ(0px);
+            h2 {
+                color: #111;
+                font-size: 30px;
+                font-weight: 600;
+                text-align: center;
+            }
+            li{
+                h3 {
+                    color: #111;
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding: 0.5rem;
+                }
+                input {
+                    padding: 0.5rem;
+                }
+                .checkbox {
+                    padding-top: 30%;
+                    font-size: 20px;
+                    a {
+                        font-size: 20px; 
+                    }
+                }
+            } 
+            button {
+                background-color: yellow;
+                border-radius: 10px;
+                color: blue;
+                padding: 0.5rem 2rem;
+                font-size: 20px;
+                position: absolute;
+                top: 80%;
+                left: 40%;
+                outline: none;
+            
+            }
+        }
+       
+    }
+}
+.dflex {
+    display: flex;
+}
+@media(max-width:1100px) {
+    .container {
+        section {
+            &:nth-of-type(3){
+                display: none;
+            }
+        }
+    }
+}
+@media(max-width:450px) {
+    .menu {
+        .navbar {
+            a {
+                display: none;
+            }
+            .brand {
+                display: block;
+                position: relative;
+                right: 30%;
+            }  
+        }
+        .toggler {
+            display: block;
+            position: relative;
+            top: -50px;
+            left: 85%;
+            height:0;
+                .icon{
+                color: white;
+                width: 10%;
+            } 
+            
+        }
+    }
+    .container {
+        height: 100vh;
+        section {
+            &:nth-of-type(1){
+                height: 200vh;
+            }
+            &:nth-of-type(2){
+                background-size: 40vh;
+                background-position: 50% 25%;
+            }
+            &:nth-of-type(4){
+                position: relative;
+                left: 25%;
+                top: 20%;
+                height: 40%;
+                width: 60%;
+                line-height: 1.5rem;
+                padding: 2rem 0 0 0;
+                font-weight: 600;
+            }
+            &:nth-of-type(5) {
+                height: 100vh;
+                h2 {
+                    font-size: 20px;
+                }
+                li{
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                    input {
+                        padding: 5px;
+                    }
+                    .checkbox {
+                        padding-top: 30%;
+                        font-size: 16px;
+                        a {
+                            font-size: 16px; 
+                        }
+                    }
+                } 
+                button {
+                    background-color: yellow;
+                    border-radius: 10px;
+                    color: blue;
+                    padding: 0.5rem 2rem;
+                    font-size: 16px;
+                    position: absolute;
+                    top: 60%;
+                    left: 30%;
+                    outline: none;
+                
+                }
+            }
+            
+        }
+    }
+    
+}
+@media(orientation:landscape)and(max-width:900px) {
+
+    .menu{
+        .navbar {
+            height: 20%;
+        }
+    }
+.container {
+    section {
+        &:nth-of-type(4){
+        position: relative;
+        right: 20%;
+        top: 30%;
+        height: 40%;
+        width: 60%;
+        line-height: 1.5rem;
+        padding: 2rem 0 0 0;
+        font-weight: 400;
+            h1 {
+                font-weight: 600;
+                font-size: 22px;
+                padding-bottom: 1rem;
+            }
+        }
+        &:nth-of-type(5){
+            position: relative;
+            top: 110vh;
+            width: 90%;
+            height: 170%;
+            padding: 5%;
+            margin-left: 5%;
+            h2 {
+                font-size: 22px;
+                font-weight: 600;
+            }
+            li{
+                h3 {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                .checkbox {
+                    font-size: 16px;
+                    a {
+                        font-size: 16px; 
+                    }
+                }
+            } 
+            button {
+                font-size: 16px;
+            }
+        }
+    }
+}
+}
+
+
+    
